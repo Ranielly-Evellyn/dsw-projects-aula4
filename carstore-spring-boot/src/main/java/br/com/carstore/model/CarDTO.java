@@ -2,9 +2,18 @@ package br.com.carstore.model;
 
 public class CarDTO {
 
-    private String name;
+    private String id;  // <-- NOVO campo
 
+    private String name;
     private String color;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -21,5 +30,4 @@ public class CarDTO {
     public void setColor(String color) {
         this.color = color;
     }
-
 }

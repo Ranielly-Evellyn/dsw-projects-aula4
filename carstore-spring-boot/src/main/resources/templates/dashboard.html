@@ -20,7 +20,10 @@
       <tr th:each="car : ${cars}">
           <td th:text="${car.name}"></td>
           <td th:text="${car.color}"></td>
-          <td><!-- Ações futuras: editar/    --></td>
+          <td>
+              <a th:href="@{'/cars/edit/' + ${car.id}}">Editar</a> |
+              <a th:href="@{'/cars/delete/' + ${car.id}}">Excluir</a>
+          </td>
       </tr>
       </tbody>
   </table>
