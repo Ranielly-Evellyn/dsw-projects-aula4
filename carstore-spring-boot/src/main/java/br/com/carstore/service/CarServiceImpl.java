@@ -23,7 +23,7 @@ public class CarServiceImpl implements CarService  {
 
     @Override
     public void save(CarDTO carDTO) {
-        carDTO.setId(UUID.randomUUID().toString()); // gera ID único
+        carDTO.setId(UUID.randomUUID().toString());
         cars.add(carDTO);
     }
 
@@ -36,7 +36,8 @@ public class CarServiceImpl implements CarService  {
     public void update(String id, CarDTO carDTO) {
         for (CarDTO c : cars) {
             if (c.getId().equals(id)) {
-                c.setName(carDTO.getName());
+                c.setName(carDTO.
+                        getName());
                 c.setColor(carDTO.getColor());
                 break;
             }
